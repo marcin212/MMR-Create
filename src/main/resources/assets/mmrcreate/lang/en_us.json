@@ -1,0 +1,5 @@
+{
+  "modular_machinery_reborn_create.jei.required_stress_capacity": "Required Stress Units: %s",
+  "modular_machinery_reborn_create.requirment.insufficient_stress": "Insufficient Stress Units",
+  "modular_machinery_reborn_create.component.missing.kinetic.input": "Missing Kinetic Input Hatch"
+}
