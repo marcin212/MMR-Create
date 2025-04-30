@@ -1,5 +1,39 @@
 {
   "modular_machinery_reborn_create.jei.required_stress_capacity": "Required Stress Units: %s",
   "modular_machinery_reborn_create.requirment.insufficient_stress": "Insufficient Stress Units",
-  "modular_machinery_reborn_create.component.missing.kinetic.input": "Missing Kinetic Input Hatch"
+  "modular_machinery_reborn_create.component.missing.kinetic.input": "Missing Kinetic Input Hatch",
+  "itemGroup.mmrcreate.all_items": "Modular Machinery Reborn Create Addon",
+
+  "block.mmrcreate.kinetic_input_hatch_tiny_slow": "Kinetic Input Hatch Tiny (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_tiny_medium": "Kinetic Input Hatch Tiny (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_tiny_fast": "Kinetic Input Hatch Tiny (Fast)",
+
+  "block.mmrcreate.kinetic_input_hatch_small_slow": "Kinetic Input Hatch Small (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_small_medium": "Kinetic Input Hatch Small (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_small_fast": "Kinetic Input Hatch Small (Fast)",
+
+  "block.mmrcreate.kinetic_input_hatch_normal_slow": "Kinetic Input Hatch Normal (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_normal_medium": "Kinetic Input Hatch Normal (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_normal_fast": "Kinetic Input Hatch Normal (Fast)",
+
+  "block.mmrcreate.kinetic_input_hatch_reinforced_slow": "Kinetic Input Hatch Reinforced (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_reinforced_medium": "Kinetic Input Hatch Reinforced (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_reinforced_fast": "Kinetic Input Hatch Reinforced (Fast)",
+
+  "block.mmrcreate.kinetic_input_hatch_big_slow": "Kinetic Input Hatch Big (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_big_medium": "Kinetic Input Hatch Big (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_big_fast": "Kinetic Input Hatch Big (Fast)",
+
+  "block.mmrcreate.kinetic_input_hatch_huge_slow": "Kinetic Input Hatch Huge (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_huge_medium": "Kinetic Input Hatch Huge (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_huge_fast": "Kinetic Input Hatch Huge (Fast)",
+
+  "block.mmrcreate.kinetic_input_hatch_ludicrous_slow": "Kinetic Input Hatch Ludicrous (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_ludicrous_medium": "Kinetic Input Hatch Ludicrous (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_ludicrous_fast": "Kinetic Input Hatch Ludicrous (Fast)",
+
+  "block.mmrcreate.kinetic_input_hatch_vacuum_slow": "Kinetic Input Hatch Vacuum (Slow)",
+  "block.mmrcreate.kinetic_input_hatch_vacuum_medium": "Kinetic Input Hatch Vacuum (Medium)",
+  "block.mmrcreate.kinetic_input_hatch_vacuum_fast": "Kinetic Input Hatch Vacuum (Fast)"
+
 }
