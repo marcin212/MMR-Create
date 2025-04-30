@@ -1,0 +1,12 @@
+{
+  "values": [
+    "mmrcreate:kinetic_input_hatch_tiny_slow",
+    "mmrcreate:kinetic_input_hatch_small_slow",
+    "mmrcreate:kinetic_input_hatch_normal_slow",
+    "mmrcreate:kinetic_input_hatch_reinforced_slow",
+    "mmrcreate:kinetic_input_hatch_big_slow",
+    "mmrcreate:kinetic_input_hatch_huge_slow",
+    "mmrcreate:kinetic_input_hatch_ludicrous_slow",
+    "mmrcreate:kinetic_input_hatch_vacuum_slow"
+  ]
+}

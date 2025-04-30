@@ -1,0 +1,12 @@
+{
+  "values": [
+    "mmrcreate:kinetic_input_hatch_tiny_medium",
+    "mmrcreate:kinetic_input_hatch_small_medium",
+    "mmrcreate:kinetic_input_hatch_normal_medium",
+    "mmrcreate:kinetic_input_hatch_reinforced_medium",
+    "mmrcreate:kinetic_input_hatch_big_medium",
+    "mmrcreate:kinetic_input_hatch_huge_medium",
+    "mmrcreate:kinetic_input_hatch_ludicrous_medium",
+    "mmrcreate:kinetic_input_hatch_vacuum_medium"
+  ]
+}
