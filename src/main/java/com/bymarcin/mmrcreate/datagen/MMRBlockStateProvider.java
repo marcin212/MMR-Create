@@ -19,7 +19,7 @@ public class MMRBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         ModelFile kineticInputHatchModel = models().getExistingFile(modLoc("block/kinetic_input_hatch"));
-        createStateFor(BlockRegistration.KINETIC_INPUT_HATCH_TINY_SLOW, kineticInputHatchModel);
+        BlockRegistration.KINETIC_BLOCK_ENTRIES.forEach((entry) -> createStateFor(entry, kineticInputHatchModel));
     }
 
     private void createStateFor(BlockEntry<?> blockEntry, ModelFile modelFile) {
