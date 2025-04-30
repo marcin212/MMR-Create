@@ -18,6 +18,7 @@ public class MMRCreateTags {
 
     private static class Tag<T> {
         private final TagKey<T> tag;
+
         protected Tag(TagKey<T> tag) {
             this.tag = tag;
         }
@@ -45,6 +46,7 @@ public class MMRCreateTags {
         public static final TagKey<Item> KINETIC_INPUT_SLOW = new Items(false, "kinetic_input_hatch/slow").get();
         public static final TagKey<Item> KINETIC_INPUT_MEDIUM = new Items(false, "kinetic_input_hatch/medium").get();
         public static final TagKey<Item> KINETIC_INPUT_FAST = new Items(false, "kinetic_input_hatch/fast").get();
+
         private Items(boolean isNeoForge, String name) {
             super(itemTag(name, isNeoForge));
         }

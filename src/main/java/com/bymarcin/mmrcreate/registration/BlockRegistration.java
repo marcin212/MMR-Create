@@ -1,16 +1,11 @@
 package com.bymarcin.mmrcreate.registration;
 
 import com.bymarcin.mmrcreate.MMRCreate;
-import com.bymarcin.mmrcreate.MMRCreateTags;
 import com.bymarcin.mmrcreate.block.BlockKineticInputHatch;
 import com.bymarcin.mmrcreate.blockentity.KineticInputHatchEntity;
-import com.simibubi.create.AllTags;
 import com.simibubi.create.content.kinetics.base.IRotate;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
-import es.degrassi.mmreborn.ModularMachineryReborn;
-import es.degrassi.mmreborn.data.MMRTags;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 
 import java.util.Arrays;

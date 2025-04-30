@@ -67,8 +67,8 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
 
     @Override
     public void gatherRequirements(IRequirementList<KineticComponent> list) {
-        list.processOnStart((k, context)-> test(k, context) ? CraftingResult.success() : CraftingResult.error(Component.translatable("modular_machinery_reborn_create.requirment.insufficient_stress")));
-        list.processEachTick((k, context)-> test(k, context) ? CraftingResult.success() : CraftingResult.error(Component.translatable("modular_machinery_reborn_create.requirment.insufficient_stress")));
+        list.processOnStart((k, context) -> test(k, context) ? CraftingResult.success() : CraftingResult.error(Component.translatable("modular_machinery_reborn_create.requirment.insufficient_stress")));
+        list.processEachTick((k, context) -> test(k, context) ? CraftingResult.success() : CraftingResult.error(Component.translatable("modular_machinery_reborn_create.requirment.insufficient_stress")));
     }
 
     @Override
@@ -88,7 +88,7 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
 
     @Override
     public JsonObject asJson() {
-        var a=  IRequirement.super.asJson();
+        var a = IRequirement.super.asJson();
         a.addProperty("stress", getStress());
         return a;
     }

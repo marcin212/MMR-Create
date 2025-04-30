@@ -10,6 +10,7 @@ public interface KineticRequirementJS extends RecipeJSBuilder {
     default MachineRecipeBuilderJS requireKinetic(long stress) {
         return addRequirement(new RecipeRequirement<>(new RequirementKinetic(stress, IOType.INPUT, new PositionedRequirement(0, 0))));
     }
+
     default MachineRecipeBuilderJS requireKinetic(long stress, int x, int y) {
         return addRequirement(new RecipeRequirement<>(new RequirementKinetic(stress, IOType.INPUT, new PositionedRequirement(x, y))));
     }

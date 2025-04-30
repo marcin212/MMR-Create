@@ -25,18 +25,12 @@ public class MMRBlockStateProvider extends BlockStateProvider {
     private void createStateFor(BlockEntry<?> blockEntry, ModelFile modelFile) {
         getVariantBuilder(blockEntry.get())
                 .forAllStates((state) -> switch (state.getValue(BlockStateProperties.FACING)) {
-                    case NORTH ->
-                            ConfiguredModel.builder().rotationX(90).modelFile(modelFile).build();
-                    case SOUTH ->
-                            ConfiguredModel.builder().rotationX(90).rotationY(180).modelFile(modelFile).build();
-                    case EAST ->
-                            ConfiguredModel.builder().rotationX(90).rotationY(90).modelFile(modelFile).build();
-                    case WEST ->
-                            ConfiguredModel.builder().rotationX(90).rotationY(270).modelFile(modelFile).build();
-                    case DOWN ->
-                            ConfiguredModel.builder().rotationX(180).modelFile(modelFile).build();
-                    default ->
-                            ConfiguredModel.builder().modelFile(modelFile).build();
+                    case NORTH -> ConfiguredModel.builder().rotationX(90).modelFile(modelFile).build();
+                    case SOUTH -> ConfiguredModel.builder().rotationX(90).rotationY(180).modelFile(modelFile).build();
+                    case EAST -> ConfiguredModel.builder().rotationX(90).rotationY(90).modelFile(modelFile).build();
+                    case WEST -> ConfiguredModel.builder().rotationX(90).rotationY(270).modelFile(modelFile).build();
+                    case DOWN -> ConfiguredModel.builder().rotationX(180).modelFile(modelFile).build();
+                    default -> ConfiguredModel.builder().modelFile(modelFile).build();
                 });
 
         simpleBlockItem(blockEntry.get(), modelFile);

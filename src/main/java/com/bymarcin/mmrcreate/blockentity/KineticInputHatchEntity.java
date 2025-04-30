@@ -41,8 +41,8 @@ public class KineticInputHatchEntity extends KineticBlockEntity implements Machi
     public void onSpeedChanged(float previousSpeed) {
         super.onSpeedChanged(previousSpeed);
         int sufficientSpeedLevel = 0;
-        if( getBlockState().getBlock() instanceof IRotate rotate) {
-            sufficientSpeedLevel = getSpeed() >= rotate.getMinimumRequiredSpeedLevel().getSpeedValue()? 1 : 0;
+        if (getBlockState().getBlock() instanceof IRotate rotate) {
+            sufficientSpeedLevel = getSpeed() >= rotate.getMinimumRequiredSpeedLevel().getSpeedValue() ? 1 : 0;
         }
         stress.setStress((long) (getSpeed() * lastStressApplied * sufficientSpeedLevel));
     }
@@ -126,7 +126,7 @@ public class KineticInputHatchEntity extends KineticBlockEntity implements Machi
     public void markForUpdate() {
         if (requestModelUpdate) requestModelDataUpdate();
         setRequestModelUpdate(false);
-        if(getLevel() != null) {
+        if (getLevel() != null) {
             getLevel().setBlockAndUpdate(getBlockPos(), getBlockState());
         }
         setChanged();
