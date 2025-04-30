@@ -1,4 +1,4 @@
-package com.bymarcin.mmrcreate.generation;
+package com.bymarcin.mmrcreate.datagen;
 
 import com.bymarcin.mmrcreate.MMRCreate;
 import net.minecraft.core.HolderLookup;

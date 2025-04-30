@@ -1,4 +1,4 @@
-package com.bymarcin.mmrcreate.generation;
+package com.bymarcin.mmrcreate.datagen;
 
 import com.bymarcin.mmrcreate.MMRCreate;
 import net.minecraft.core.HolderLookup;
@@ -8,6 +8,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -28,5 +29,6 @@ public class DataGeneration {
                 event.includeServer(),
                 new MMRItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), fileHelper)
         );
+        generator.addProvider(event.includeServer(), new MMRBlockStateProvider(packOutput, fileHelper));
     }
 }

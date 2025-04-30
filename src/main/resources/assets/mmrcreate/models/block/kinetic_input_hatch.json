@@ -1,0 +1,87 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "block/block",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "3": "create:block/funnel/andesite_funnel_frame",
+    "5": "modular_machinery_reborn:block/casing_plain",
+    "particle": "modular_machinery_reborn:block/casing_plain",
+    "back": "create:block/gearbox"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#5", "tintindex": 4 },
+        "east": {"uv": [0, 0, 16, 16], "texture": "#5", "tintindex": 4 },
+        "south": {"uv": [0, 0, 16, 16], "texture": "#5", "tintindex": 4 },
+        "west": {"uv": [0, 0, 16, 16], "texture": "#5", "tintindex": 4 },
+        "up": {"uv": [0, 0, 16, 16], "texture": "#5", "tintindex": 4 },
+        "down": {"uv": [0, 0, 16, 16], "texture": "#3"}
+      }
+    },
+    {
+      "from": [1.95, 0.95, 1.95],
+      "to": [14.05, 2.05, 14.05],
+      "faces": {
+        "up": {"uv": [2, 2, 14, 14], "texture": "#back"},
+        "down": {"uv": [2, 2, 14, 14], "texture": "#back"}
+      }
+    },
+    {
+      "from": [1.95, 2, 1.95],
+      "to": [14.05, 0, 14.05],
+      "faces": {
+        "north": {"uv": [2, 14, 14, 16], "rotation": 180, "texture": "#back"},
+        "east": {"uv": [2, 14, 14, 16], "rotation": 180, "texture": "#back"},
+        "south": {"uv": [2, 14, 14, 16], "rotation": 180, "texture": "#back"},
+        "west": {"uv": [2, 14, 14, 16], "rotation": 180, "texture": "#back"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [75, 45, 180],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [75, 45, 180],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 45, 180],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 225, 180],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "ground": {
+      "rotation": [0, 0, 90],
+      "translation": [0, 3, 0],
+      "scale": [0.25, 0.25, 0.25]
+    },
+    "gui": {
+      "rotation": [30, 225, 90],
+      "scale": [0.625, 0.625, 0.625]
+    },
+    "head": {
+      "rotation": [90, 0, 0]
+    },
+    "fixed": {
+      "rotation": [90, 0, 0],
+      "scale": [0.5, 0.5, 0.5]
+    }
+  },
+  "groups": [
+    {
+      "name": "kinetic_hatch",
+      "origin": [8, 8, 8],
+      "color": 0,
+      "children": [0, 1, 2]
+    }
+  ]
+}

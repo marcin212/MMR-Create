@@ -79,16 +79,6 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
     }
 
     @Override
-    public IRequirement<KineticComponent> deepCopyModified(List<RecipeModifier> modifiers) {
-        return new RequirementKinetic(stress, mode, position);
-    }
-
-    @Override
-    public IRequirement<KineticComponent> deepCopy() {
-        return new RequirementKinetic(stress, mode, position);
-    }
-
-    @Override
     public @NotNull Component getMissingComponentErrorMessage(IOType ioType) {
         return Component.translatable(String.format("modular_machinery_reborn_create.component.missing.kinetic.%s", ioType.name().toLowerCase()));
     }
