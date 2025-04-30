@@ -12,6 +12,7 @@ import es.degrassi.mmreborn.common.crafting.requirement.emi.EmiComponent;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -34,12 +35,12 @@ public class EmiKineticComponent extends EmiComponent<StressHolder, RecipeRequir
     }
 
     @Override
-    public List<StressHolder> ingredients() {
+    public @NotNull List<StressHolder> ingredients() {
         return Lists.newArrayList(requirement.requirement().getRequiredStress().copy());
     }
 
     @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY) {
+    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY) {
         super.render(graphics, mouseX, mouseY);
         drawStack(graphics, 0, 0, -1);
     }
@@ -50,12 +51,12 @@ public class EmiKineticComponent extends EmiComponent<StressHolder, RecipeRequir
     }
 
     @Override
-    public List<Component> getTooltip() {
+    public @NotNull List<Component> getTooltip() {
         return List.of(Component.translatable("modular_machinery_reborn_create.jei.required_stress_capacity", requirement.requirement().getStress()));
     }
 
     @Override
-    public EmiStack getStack() {
+    public @NotNull EmiStack getStack() {
         return EmiStack.of(AllBlocks.COGWHEEL.get().asItem());
     }
 }

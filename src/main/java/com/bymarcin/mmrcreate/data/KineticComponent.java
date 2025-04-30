@@ -36,7 +36,7 @@ public class KineticComponent extends MachineComponent<StressHolder> {
     }
 
     @Override
-    public @NotNull CompoundTag asTag(HolderLookup.Provider provider) {
+    public @NotNull CompoundTag asTag(HolderLookup.@NotNull Provider provider) {
         CompoundTag sup =  super.asTag(provider);
         sup.putLong("stress", stress.getStress());
         return sup;

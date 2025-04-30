@@ -18,10 +18,11 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.network.PacketDistributor;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class KineticInputHatchEntity extends KineticBlockEntity implements MachineComponentEntity<KineticComponent>, ColorableMachineEntity, IEntitySynchronizable {
-    private StressHolder stress = new StressHolder();
+    private final StressHolder stress = new StressHolder();
     private int casingColor = Config.machineColor;
     private boolean requestModelUpdate = false;
     private boolean inStructure = false;
@@ -132,7 +133,7 @@ public class KineticInputHatchEntity extends KineticBlockEntity implements Machi
     }
 
     @Override
-    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider lookupProvider) {
+    public void handleUpdateTag(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider lookupProvider) {
         read(tag, lookupProvider, false);
     }
 

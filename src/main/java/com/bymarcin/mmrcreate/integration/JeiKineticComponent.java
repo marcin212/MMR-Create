@@ -13,6 +13,7 @@ import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import net.minecraft.network.chat.Component;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -33,12 +34,12 @@ public class JeiKineticComponent extends JeiComponent<StressHolder, RecipeRequir
     }
 
     @Override
-    public List<StressHolder> ingredients() {
+    public @NotNull List<StressHolder> ingredients() {
         return Lists.newArrayList(requirement.requirement().getRequiredStress().copy());
     }
 
     @Override
-    public void setRecipe(MMRRecipeCategory category, IRecipeLayoutBuilder builder, MachineRecipe recipe, IFocusGroup focuses) {
+    public void setRecipe(@NotNull MMRRecipeCategory category, IRecipeLayoutBuilder builder, @NotNull MachineRecipe recipe, @NotNull IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.RENDER_ONLY, getPosition().x(), getPosition().y())
                 .addItemStack(AllBlocks.COGWHEEL.asStack())
                 .addRichTooltipCallback((view, tooltip) -> {
