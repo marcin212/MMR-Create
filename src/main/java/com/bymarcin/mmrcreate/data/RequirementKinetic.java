@@ -9,14 +9,12 @@ import es.degrassi.mmreborn.api.crafting.ICraftingContext;
 import es.degrassi.mmreborn.api.crafting.requirement.IRequirement;
 import es.degrassi.mmreborn.api.crafting.requirement.IRequirementList;
 import es.degrassi.mmreborn.common.crafting.ComponentType;
-import es.degrassi.mmreborn.common.crafting.modifier.RecipeModifier;
 import es.degrassi.mmreborn.common.crafting.requirement.PositionedRequirement;
 import es.degrassi.mmreborn.common.crafting.requirement.RequirementType;
 import es.degrassi.mmreborn.common.machine.IOType;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
 
 public class RequirementKinetic implements IRequirement<KineticComponent> {
     public static final NamedCodec<RequirementKinetic> CODEC =
@@ -75,7 +73,7 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
 
     @Override
     public PositionedRequirement getPosition() {
-        return null;
+        return position;
     }
 
     @Override
