@@ -1,4 +1,4 @@
-# Modular Machinery Reborn Mekanism
+# Modular Machinery Reborn Create
 
 Modular Machinery Reborn Create is an addon of Modular Machinery Reborn mod
 
