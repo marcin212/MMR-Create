@@ -46,19 +46,44 @@ public class KineticComponent extends MachineComponent<StressHolder> {
     public <C extends MachineComponent<?>> boolean canMerge(@NotNull C c) {
         KineticComponent comp = (KineticComponent) c;
         if (c == this) return false;
-        return comp.getIOType() == getIOType();
+        return comp.getIOType() == getIOType() &&
+                (getIOType().isInput() || comp.stress.equals(stress));
     }
 
     @Override
     public <C extends MachineComponent<?>> @NotNull C merge(@NotNull C c) {
         KineticComponent comp = (KineticComponent) c;
         //noinspection unchecked
-        return (C) new KineticComponent(new StressHolder() {
+        return (C) new KineticComponent(new StressHolder(stress.isProducing(), stress.getRpm(), stress.getStress()) {
             @Override
             public long getStress() {
-                return comp.stress.getStress() + stress.getStress();
+                return getIOType().isInput()?
+                    comp.stress.getStress() + stress.getStress():
+                    stress.getStress();
             }
-        }, IOType.INPUT);
+
+            @Override
+            public StressHolder setStress(long s) {
+                comp.stress.setStress(s);
+                stress.setStress(s);
+                return super.setStress(s);
+            }
+
+
+            @Override
+            public StressHolder setRpm(long rpm) {
+                comp.stress.setRpm(rpm);
+                stress.setRpm(rpm);
+                return super.setRpm(rpm);
+            }
+
+            @Override
+            public StressHolder setProducing(boolean producing) {
+                comp.stress.setProducing(producing);
+                stress.setProducing(producing);
+                return super.setProducing(producing);
+            }
+        }, getIOType());
     }
 
     @Override

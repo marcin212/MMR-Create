@@ -59,7 +59,10 @@ public class MMRBlockTagProvider extends BlockTagsProvider {
                 // VACUUM
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_SLOW.get(),
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_MEDIUM.get(),
-                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get()
+                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get(),
+
+                //OUTPUT
+                BlockRegistration.KINETIC_OUTPUT_HATCH.get()
         );
 
         tag(MMRCreateTags.Blocks.KINETIC).add(
@@ -101,7 +104,10 @@ public class MMRBlockTagProvider extends BlockTagsProvider {
                 // VACUUM
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_SLOW.get(),
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_MEDIUM.get(),
-                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get()
+                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get(),
+
+                //OUTPUT
+                BlockRegistration.KINETIC_OUTPUT_HATCH.get()
         );
 
         tag(MMRCreateTags.Blocks.KINETIC_INPUT).add(
@@ -221,6 +227,11 @@ public class MMRBlockTagProvider extends BlockTagsProvider {
 
                 // VACUUM
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get()
+        );
+
+        tag(MMRCreateTags.Blocks.KINETIC_OUTPUT).add(
+                //OUTPUT
+                BlockRegistration.KINETIC_OUTPUT_HATCH.get()
         );
     }
 }

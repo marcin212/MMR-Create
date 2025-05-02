@@ -44,7 +44,11 @@ public class JeiKineticComponent extends JeiComponent<StressHolder, RecipeRequir
                 .addItemStack(AllBlocks.COGWHEEL.asStack())
                 .addRichTooltipCallback((view, tooltip) -> {
                     tooltip.clear();
-                    tooltip.add(Component.translatable("modular_machinery_reborn_create.jei.required_stress_capacity", requirement.requirement().getStress()));
+                    if (requirement.requirement().getMode().isInput()) {
+                        tooltip.add(Component.translatable("modular_machinery_reborn_create.jei.required_stress_capacity", requirement.requirement().getStress()));
+                    } else {
+                        tooltip.add(Component.translatable("modular_machinery_reborn_create.jei.produce_stress_capacity", requirement.requirement().getStress()));
+                    }
                 });
     }
 }

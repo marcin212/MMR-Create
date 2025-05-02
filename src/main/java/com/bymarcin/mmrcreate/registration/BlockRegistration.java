@@ -2,14 +2,13 @@ package com.bymarcin.mmrcreate.registration;
 
 import com.bymarcin.mmrcreate.MMRCreate;
 import com.bymarcin.mmrcreate.block.BlockKineticInputHatch;
+import com.bymarcin.mmrcreate.block.BlockKineticOutputHatch;
 import com.bymarcin.mmrcreate.blockentity.KineticInputHatchEntity;
+import com.bymarcin.mmrcreate.blockentity.KineticOutputHatchEntity;
 import com.simibubi.create.content.kinetics.base.IRotate;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.neoforged.bus.api.IEventBus;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class BlockRegistration {
     //TINY
@@ -164,48 +163,11 @@ public class BlockRegistration {
             .simpleItem()
             .register();
 
-    public static final List<BlockEntry<?>> KINETIC_BLOCK_ENTRIES = Arrays.asList(
-            //TINY
-            KINETIC_INPUT_HATCH_TINY_SLOW,
-            KINETIC_INPUT_HATCH_TINY_MEDIUM,
-            KINETIC_INPUT_HATCH_TINY_FAST,
-
-            // SMALL
-            KINETIC_INPUT_HATCH_SMALL_SLOW,
-            KINETIC_INPUT_HATCH_SMALL_MEDIUM,
-            KINETIC_INPUT_HATCH_SMALL_FAST,
-
-            // NORMAL
-            KINETIC_INPUT_HATCH_NORMAL_SLOW,
-            KINETIC_INPUT_HATCH_NORMAL_MEDIUM,
-            KINETIC_INPUT_HATCH_NORMAL_FAST,
-
-            // REINFORCED
-            KINETIC_INPUT_HATCH_REINFORCED_SLOW,
-            KINETIC_INPUT_HATCH_REINFORCED_MEDIUM,
-            KINETIC_INPUT_HATCH_REINFORCED_FAST,
-
-            // BIG
-            KINETIC_INPUT_HATCH_BIG_SLOW,
-            KINETIC_INPUT_HATCH_BIG_MEDIUM,
-            KINETIC_INPUT_HATCH_BIG_FAST,
-
-
-            // HUGE
-            KINETIC_INPUT_HATCH_HUGE_SLOW,
-            KINETIC_INPUT_HATCH_HUGE_MEDIUM,
-            KINETIC_INPUT_HATCH_HUGE_FAST,
-
-            // LUDICROUS
-            KINETIC_INPUT_HATCH_LUDICROUS_SLOW,
-            KINETIC_INPUT_HATCH_LUDICROUS_MEDIUM,
-            KINETIC_INPUT_HATCH_LUDICROUS_FAST,
-
-            // VACUUM
-            KINETIC_INPUT_HATCH_VACUUM_SLOW,
-            KINETIC_INPUT_HATCH_VACUUM_MEDIUM,
-            KINETIC_INPUT_HATCH_VACUUM_FAST
-    );
+    public static final BlockEntry<BlockKineticOutputHatch<KineticOutputHatchEntity>> KINETIC_OUTPUT_HATCH = MMRCreate.REGISTRATE
+            .block("kinetic_output_hatch", p -> new BlockKineticOutputHatch<>(p, KineticOutputHatchEntity.class, EntityRegistration.KINETIC_OUTPUT_HATCH))
+            .initialProperties(SharedProperties::stone)
+            .simpleItem()
+            .register();
 
 
     public static void register(final IEventBus bus) {

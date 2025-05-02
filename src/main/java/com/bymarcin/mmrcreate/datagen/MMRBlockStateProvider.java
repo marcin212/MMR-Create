@@ -72,10 +72,11 @@ public class MMRBlockStateProvider extends BlockStateProvider {
         createStateFor(BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_MEDIUM, VACUUM, INPUT);
         createStateFor(BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST, VACUUM, INPUT);
 
+        createStateFor(BlockRegistration.KINETIC_OUTPUT_HATCH, TINY, OUTPUT);
     }
 
     private ModelFile createHatchModel(String tier, String speed, String direction) {
-        return models().withExistingParent(String.format("kinetic_%s_hatch_%s_%s", direction, tier, speed), modLoc(String.format("block/kinetic_%s_hatch", direction)))
+        return models().withExistingParent(String.format("kinetic_%s_hatch_%s_%s", direction, tier, speed), modLoc("block/kinetic_hatch"))
                 .texture("frame", modLoc(String.format("block/andesite_hatch_frame_%s", tier)))
                 .texture("back", modLoc(String.format("block/hatch_%s", direction)))
                 .texture("casing", modLoc(String.format("block/casing_plain_%s", speed)));

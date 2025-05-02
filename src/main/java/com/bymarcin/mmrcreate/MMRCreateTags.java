@@ -31,6 +31,7 @@ public class MMRCreateTags {
     public static class Blocks extends Tag<Block> {
         public static final TagKey<Block> KINETIC = new Blocks(false, "kinetic_hatch").get();
         public static final TagKey<Block> KINETIC_INPUT = new Blocks(false, "kinetic_input_hatch").get();
+        public static final TagKey<Block> KINETIC_OUTPUT = new Blocks(false, "kinetic_output_hatch").get();
         public static final TagKey<Block> KINETIC_INPUT_SLOW = new Blocks(false, "kinetic_input_hatch/slow").get();
         public static final TagKey<Block> KINETIC_INPUT_MEDIUM = new Blocks(false, "kinetic_input_hatch/medium").get();
         public static final TagKey<Block> KINETIC_INPUT_FAST = new Blocks(false, "kinetic_input_hatch/fast").get();
@@ -43,6 +44,7 @@ public class MMRCreateTags {
     public static class Items extends Tag<Item> {
         public static final TagKey<Item> KINETIC = new Items(false, "kinetic_hatch").get();
         public static final TagKey<Item> KINETIC_INPUT = new Items(false, "kinetic_input_hatch").get();
+        public static final TagKey<Item> KINETIC_OUTPUT = new Items(false, "kinetic_output_hatch").get();
         public static final TagKey<Item> KINETIC_INPUT_SLOW = new Items(false, "kinetic_input_hatch/slow").get();
         public static final TagKey<Item> KINETIC_INPUT_MEDIUM = new Items(false, "kinetic_input_hatch/medium").get();
         public static final TagKey<Item> KINETIC_INPUT_FAST = new Items(false, "kinetic_input_hatch/fast").get();

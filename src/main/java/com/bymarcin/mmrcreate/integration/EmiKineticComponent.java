@@ -52,7 +52,9 @@ public class EmiKineticComponent extends EmiComponent<StressHolder, RecipeRequir
 
     @Override
     public @NotNull List<Component> getTooltip() {
-        return List.of(Component.translatable("modular_machinery_reborn_create.jei.required_stress_capacity", requirement.requirement().getStress()));
+        return requirement.requirement().getMode().isInput() ?
+            List.of(Component.translatable("modular_machinery_reborn_create.jei.required_stress_capacity", requirement.requirement().getStress())):
+            List.of(Component.translatable("modular_machinery_reborn_create.jei.produce_stress_capacity", requirement.requirement().getStress()));
     }
 
     @Override

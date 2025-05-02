@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class RequirementKinetic implements IRequirement<KineticComponent> {
     public static final NamedCodec<RequirementKinetic> CODEC =
             NamedCodec.record(instance -> instance.group(
+                            NamedCodec.longRange(0, Long.MAX_VALUE).fieldOf("rmp").forGetter(RequirementKinetic::getRmp),
                             NamedCodec.longRange(0, Long.MAX_VALUE).fieldOf("stress").forGetter(RequirementKinetic::getStress),
                             NamedCodec.enumCodec(IOType.class).fieldOf("mode").forGetter(IRequirement::getMode),
                             PositionedRequirement.POSITION_CODEC.optionalFieldOf("position", new PositionedRequirement(0, 0)).forGetter(IRequirement::getPosition)
@@ -28,13 +29,19 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
     private final IOType mode;
     private final PositionedRequirement position;
     private final long stress;
+    private final long rpm;
     private final StressHolder requiredStress;
 
-    public RequirementKinetic(long stress, IOType mode, PositionedRequirement position) {
-        this.mode = mode;
+    public RequirementKinetic(long rmp,long stress, IOType mode, PositionedRequirement position) {
+        this.rpm = rmp;
         this.stress = stress;
+        this.mode = mode;
         this.position = position;
-        requiredStress = new StressHolder(stress);
+        requiredStress = new StressHolder(false, rpm, stress);
+    }
+
+    public long getRmp() {
+        return rpm;
     }
 
     public long getStress() {
@@ -62,12 +69,23 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
 
     @Override
     public boolean test(KineticComponent component, ICraftingContext context) {
-        return component.getContainerProvider() != null && component.getContainerProvider().getStress() >= stress;
+        return !getMode().isInput() || component.getContainerProvider() != null && component.getContainerProvider().getStress() >= stress;
     }
 
     @Override
     public void gatherRequirements(IRequirementList<KineticComponent> list) {
-        list.processEachTick((k, context) -> test(k, context) ? CraftingResult.success() : CraftingResult.error(Component.translatable("modular_machinery_reborn_create.requirment.insufficient_stress")));
+        if(getMode().isInput()) {
+            list.processEachTick((k, context) -> test(k, context) ? CraftingResult.success() : CraftingResult.error(Component.translatable("modular_machinery_reborn_create.requirment.insufficient_stress")));
+        } else {
+            list.processOnStart((k, context)-> {
+                if(k.getContainerProvider() != null) k.getContainerProvider().setRpm(rpm).setStress(stress).setProducing(true);
+                return CraftingResult.success();
+            });
+            list.processOnEnd((k, context)-> {
+                if(k.getContainerProvider() != null) k.getContainerProvider().setProducing(false);
+                return CraftingResult.success();
+            });
+        }
     }
 
     @Override
@@ -82,13 +100,14 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
 
     @Override
     public boolean isComponentValid(KineticComponent m, ICraftingContext context) {
-        return getMode().isInput();
+        return getMode() == m.getIOType();
     }
 
     @Override
     public JsonObject asJson() {
         var a = IRequirement.super.asJson();
         a.addProperty("stress", getStress());
+        a.addProperty("rpm", getRmp());
         return a;
     }
 }

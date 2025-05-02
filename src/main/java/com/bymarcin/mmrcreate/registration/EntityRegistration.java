@@ -2,6 +2,7 @@ package com.bymarcin.mmrcreate.registration;
 
 import com.bymarcin.mmrcreate.MMRCreate;
 import com.bymarcin.mmrcreate.blockentity.KineticInputHatchEntity;
+import com.bymarcin.mmrcreate.blockentity.KineticOutputHatchEntity;
 import com.bymarcin.mmrcreate.render.KineticHatchVisual;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import net.neoforged.bus.api.IEventBus;
@@ -51,6 +52,15 @@ public class EntityRegistration {
                     BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_SLOW,
                     BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_MEDIUM,
                     BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST
+            )
+            .register();
+
+    public static final BlockEntityEntry<KineticOutputHatchEntity> KINETIC_OUTPUT_HATCH = MMRCreate.REGISTRATE
+            .blockEntity("kinetic_hatch_output", KineticOutputHatchEntity::new)
+            .visual(() -> KineticHatchVisual::new, false)
+            .validBlocks(
+                    // TINY
+                    BlockRegistration.KINETIC_OUTPUT_HATCH
             )
             .register();
 

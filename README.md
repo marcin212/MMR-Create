@@ -8,16 +8,20 @@ This mod can be used to add kinetic power on the Modular Machinery Reborn custom
 
 ```
 ServerEvents.recipes(event => {
-    event.recipes.modular_machinery_reborn.machine_recipe("mmr:testing", 150)
+    event.recipes.modular_machinery_reborn.machine_recipe("mmr:testing_input", 150)
         .requireItem("1x minecraft:oak_log", 16, 16)
         .produceItem('1x minecraft:oak_planks', 16+ 22,  16 )
-        .requireKinetic(1024, 16, 42)
+        .requireKinetic(1024, 16, 42) //requireKinetic(stressUnits, x, y)
+
+    event.recipes.modular_machinery_reborn.machine_recipe("mmr:testing_output", 150)
+        .requireItem("1x minecraft:oak_log", 16, 16)
+        .produceKinetic(256, 32000, 16, 42) //produceKinetic(rpm, stressCapacity, x, y) // each hatch in the structure would produce the same amount of energy.
 })
 
 
 MMREvents.machines(event => {
-    event.create("mmr:testing")
-        .name('Testing Kinetic machineJS')
+    event.create("mmr:testing_input")
+        .name('Testing Kinetic Input machineJS')
         .structure(
             MMRStructureBuilder.create()
                 .pattern(
@@ -35,7 +39,27 @@ MMREvents.machines(event => {
                 )
         )
         .controllerModel(ControllerModel.of("minecraft:furnace"))
+
+    event.create("mmr:testing_output")
+        .name('Testing Kinetic Output machineJS')
+        .structure(
+            MMRStructureBuilder.create()
+                .pattern(
+                    [
+                        ["mklik"],
+                    ]
+                )
+                .keys(
+                    {
+                        "k": "mmrcreate:kinetic_output_hatch",
+                        "l": "minecraft:iron_block",
+                        "i": "#modular_machinery_reborn:inputbus"
+                    }
+                )
+        )
+        .controllerModel(ControllerModel.of("minecraft:furnace"))
 })
+
 ```
 
 ## Available Tags
@@ -43,6 +67,7 @@ MMREvents.machines(event => {
 ```
 #mmrcreate:kinetic_hatch
 #mmrcreate:kinetic_input_hatch
+#mmrcreate:kinetic_output_hatch
 #mmrcreate:kinetic_input_hatch/slow
 #mmrcreate:kinetic_input_hatch/medium
 #mmrcreate:kinetic_input_hatch/fast

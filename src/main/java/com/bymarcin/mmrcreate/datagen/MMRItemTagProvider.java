@@ -60,7 +60,10 @@ public class MMRItemTagProvider extends ItemTagsProvider {
                 // VACUUM
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_SLOW.get().asItem(),
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_MEDIUM.get().asItem(),
-                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get().asItem()
+                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get().asItem(),
+
+                //OUTPUT
+                BlockRegistration.KINETIC_OUTPUT_HATCH.get().asItem()
         );
 
         tag(MMRCreateTags.Items.KINETIC).add(
@@ -102,7 +105,10 @@ public class MMRItemTagProvider extends ItemTagsProvider {
                 // VACUUM
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_SLOW.get().asItem(),
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_MEDIUM.get().asItem(),
-                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get().asItem()
+                BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get().asItem(),
+
+                //OUTPUT
+                BlockRegistration.KINETIC_OUTPUT_HATCH.get().asItem()
         );
 
         tag(MMRCreateTags.Items.KINETIC_INPUT).add(
@@ -222,6 +228,11 @@ public class MMRItemTagProvider extends ItemTagsProvider {
 
                 // VACUUM
                 BlockRegistration.KINETIC_INPUT_HATCH_VACUUM_FAST.get().asItem()
+        );
+
+        tag(MMRCreateTags.Items.KINETIC_OUTPUT).add(
+                //OUTPUT
+                BlockRegistration.KINETIC_OUTPUT_HATCH.get().asItem()
         );
     }
 }

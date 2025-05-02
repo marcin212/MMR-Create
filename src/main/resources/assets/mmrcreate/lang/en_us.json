@@ -1,7 +1,9 @@
 {
   "modular_machinery_reborn_create.jei.required_stress_capacity": "Required Stress Units: %s",
+  "modular_machinery_reborn_create.jei.produce_stress_capacity": "Produce Stress Units: %s",
   "modular_machinery_reborn_create.requirment.insufficient_stress": "Insufficient Stress Units",
   "modular_machinery_reborn_create.component.missing.kinetic.input": "Missing Kinetic Input Hatch",
+  "modular_machinery_reborn_create.component.missing.kinetic.output": "Missing Kinetic Output Hatch",
   "itemGroup.mmrcreate.all_items": "Modular Machinery Reborn Create Addon",
 
   "block.mmrcreate.kinetic_input_hatch_tiny_slow": "Kinetic Input Hatch Tiny (Slow)",
@@ -34,6 +36,7 @@
 
   "block.mmrcreate.kinetic_input_hatch_vacuum_slow": "Kinetic Input Hatch Vacuum (Slow)",
   "block.mmrcreate.kinetic_input_hatch_vacuum_medium": "Kinetic Input Hatch Vacuum (Medium)",
-  "block.mmrcreate.kinetic_input_hatch_vacuum_fast": "Kinetic Input Hatch Vacuum (Fast)"
+  "block.mmrcreate.kinetic_input_hatch_vacuum_fast": "Kinetic Input Hatch Vacuum (Fast)",
 
+  "block.mmrcreate.kinetic_output_hatch": "Kinetic Output Hatch"
 }
