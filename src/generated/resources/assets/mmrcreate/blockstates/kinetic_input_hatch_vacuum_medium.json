@@ -1,28 +1,28 @@
 {
   "variants": {
     "facing=down": {
-      "model": "mmrcreate:block/kinetic_input_hatch",
+      "model": "mmrcreate:block/kinetic_input_hatch_vacuum_medium",
       "x": 180
     },
     "facing=east": {
-      "model": "mmrcreate:block/kinetic_input_hatch",
+      "model": "mmrcreate:block/kinetic_input_hatch_vacuum_medium",
       "x": 90,
       "y": 90
     },
     "facing=north": {
-      "model": "mmrcreate:block/kinetic_input_hatch",
+      "model": "mmrcreate:block/kinetic_input_hatch_vacuum_medium",
       "x": 90
     },
     "facing=south": {
-      "model": "mmrcreate:block/kinetic_input_hatch",
+      "model": "mmrcreate:block/kinetic_input_hatch_vacuum_medium",
       "x": 90,
       "y": 180
     },
     "facing=up": {
-      "model": "mmrcreate:block/kinetic_input_hatch"
+      "model": "mmrcreate:block/kinetic_input_hatch_vacuum_medium"
     },
     "facing=west": {
-      "model": "mmrcreate:block/kinetic_input_hatch",
+      "model": "mmrcreate:block/kinetic_input_hatch_vacuum_medium",
       "x": 90,
       "y": 270
     }

@@ -1,0 +1,8 @@
+{
+  "parent": "mmrcreate:block/kinetic_input_hatch",
+  "textures": {
+    "back": "mmrcreate:block/hatch_input",
+    "casing": "mmrcreate:block/casing_plain_medium",
+    "frame": "mmrcreate:block/andesite_hatch_frame_small"
+  }
+}
