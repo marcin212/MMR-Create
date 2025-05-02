@@ -28,6 +28,6 @@ public class DataGeneration {
                 event.includeServer(),
                 new MMRItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), fileHelper)
         );
-        generator.addProvider(event.includeServer(), new MMRBlockStateProvider(packOutput, fileHelper));
+        generator.addProvider(event.includeClient(), new MMRBlockStateProvider(packOutput, fileHelper));
     }
 }
