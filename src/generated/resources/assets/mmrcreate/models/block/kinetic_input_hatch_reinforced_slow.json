@@ -1,5 +1,5 @@
 {
-  "parent": "mmrcreate:block/kinetic_input_hatch",
+  "parent": "mmrcreate:block/kinetic_hatch",
   "textures": {
     "back": "mmrcreate:block/hatch_input",
     "casing": "mmrcreate:block/casing_plain_slow",

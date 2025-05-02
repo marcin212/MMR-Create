@@ -23,6 +23,7 @@
     "mmrcreate:kinetic_input_hatch_ludicrous_fast",
     "mmrcreate:kinetic_input_hatch_vacuum_slow",
     "mmrcreate:kinetic_input_hatch_vacuum_medium",
-    "mmrcreate:kinetic_input_hatch_vacuum_fast"
+    "mmrcreate:kinetic_input_hatch_vacuum_fast",
+    "mmrcreate:kinetic_output_hatch"
   ]
 }
