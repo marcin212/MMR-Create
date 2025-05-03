@@ -1,7 +1,9 @@
 {
   "modular_machinery_reborn_create.jei.required_stress_capacity": "需要应力: %s",
+  "modular_machinery_reborn_create.jei.produce_stress_capacity": "产出应力: %s",
   "modular_machinery_reborn_create.requirment.insufficient_stress": "应力不足",
   "modular_machinery_reborn_create.component.missing.kinetic.input": "缺失动力输入仓",
+  "modular_machinery_reborn_create.component.missing.kinetic.output": "缺失动力输出仓",
   "itemGroup.mmrcreate.all_items": "模块化机械:重置 机械动力附属",
 
   "block.mmrcreate.kinetic_input_hatch_tiny_slow": "微型动力输入仓 (慢速)",
@@ -10,7 +12,7 @@
 
   "block.mmrcreate.kinetic_input_hatch_small_slow": "小型动力输入仓 (慢速)",
   "block.mmrcreate.kinetic_input_hatch_small_medium": "小型动力输入仓 (中速)",
-  "block.mmrcreate.kinetic_input_hatch_small_fast": "小型动力输入仓 (Fast)",
+  "block.mmrcreate.kinetic_input_hatch_small_fast": "小型动力输入仓 (快速)",
 
   "block.mmrcreate.kinetic_input_hatch_normal_slow": "中型动力输入仓 (慢速)",
   "block.mmrcreate.kinetic_input_hatch_normal_medium": "中型动力输入仓 (中速)",
@@ -34,6 +36,7 @@
 
   "block.mmrcreate.kinetic_input_hatch_vacuum_slow": "真空动力输入仓 (慢速)",
   "block.mmrcreate.kinetic_input_hatch_vacuum_medium": "真空动力输入仓 (中速)",
-  "block.mmrcreate.kinetic_input_hatch_vacuum_fast": "真空动力输入仓 (快速)"
+  "block.mmrcreate.kinetic_input_hatch_vacuum_fast": "真空动力输入仓 (快速)",
 
+  "block.mmrcreate.kinetic_output_hatch": "动力输出仓"
 }
