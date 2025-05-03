@@ -2,8 +2,8 @@
   "modular_machinery_reborn_create.jei.required_stress_capacity": "需要应力: %s",
   "modular_machinery_reborn_create.jei.produce_stress_capacity": "产出应力: %s",
   "modular_machinery_reborn_create.requirment.insufficient_stress": "应力不足",
-  "modular_machinery_reborn_create.component.missing.kinetic.input": "缺失动力输入仓",
-  "modular_machinery_reborn_create.component.missing.kinetic.output": "缺失动力输出仓",
+  "modular_machinery_reborn_create.component.missing.kinetic.input": "未找到动力输入仓",
+  "modular_machinery_reborn_create.component.missing.kinetic.output": "未找到动力输出仓",
   "itemGroup.mmrcreate.all_items": "模块化机械:重置 机械动力附属",
 
   "block.mmrcreate.kinetic_input_hatch_tiny_slow": "微型动力输入仓 (慢速)",
