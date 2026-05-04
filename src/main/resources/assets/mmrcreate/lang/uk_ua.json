@@ -1,0 +1,42 @@
+{
+  "modular_machinery_reborn_create.jei.required_stress_capacity": "Необхідні одиниці напруги (SU): %s",
+  "modular_machinery_reborn_create.jei.produce_stress_capacity": "Вироблені одиниці напруги (SU): %s",
+  "modular_machinery_reborn_create.requirment.insufficient_stress": "Недостатньо одиниць напруги (SU)",
+  "modular_machinery_reborn_create.component.missing.kinetic.input": "Відсутній люк кінетичного входу",
+  "modular_machinery_reborn_create.component.missing.kinetic.output": "Відсутній люк кінетичного виходу",
+  "itemGroup.mmrcreate.all_items": "Modular Machinery Reborn Create Addon",
+
+  "block.mmrcreate.kinetic_input_hatch_tiny_slow": "Крихітний люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_tiny_medium": "Крихітний люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_tiny_fast": "Крихітний люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_input_hatch_small_slow": "Малий люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_small_medium": "Малий люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_small_fast": "Малий люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_input_hatch_normal_slow": "Звичайний люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_normal_medium": "Звичайний люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_normal_fast": "Звичайний люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_input_hatch_reinforced_slow": "Укріплений люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_reinforced_medium": "Укріплений люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_reinforced_fast": "Укріплений люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_input_hatch_big_slow": "Великий люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_big_medium": "Великий люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_big_fast": "Великий люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_input_hatch_huge_slow": "Величезний люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_huge_medium": "Величезний люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_huge_fast": "Величезний люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_input_hatch_ludicrous_slow": "Безглуздо великий люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_ludicrous_medium": "Безглуздо великий люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_ludicrous_fast": "Безглуздо великий люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_input_hatch_vacuum_slow": "Вакуумний люк кінетичного входу (Повільний)",
+  "block.mmrcreate.kinetic_input_hatch_vacuum_medium": "Вакуумний люк кінетичного входу (Середній)",
+  "block.mmrcreate.kinetic_input_hatch_vacuum_fast": "Вакуумний люк кінетичного входу (Швидкий)",
+
+  "block.mmrcreate.kinetic_output_hatch": "Люк кінетичного виходу"
+}
