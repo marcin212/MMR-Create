@@ -1,6 +1,5 @@
 package com.bymarcin.mmrcreate.data;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 
 import java.util.Objects;

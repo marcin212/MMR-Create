@@ -17,9 +17,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class JeiKineticComponent extends JeiComponent<StressHolder, RecipeRequirement<KineticComponent, RequirementKinetic>> {
+public class JeiKineticComponent extends JeiComponent<StressHolder, RecipeRequirement<KineticComponent, RequirementKinetic, StressHolder>> {
 
-    public JeiKineticComponent(RecipeRequirement<KineticComponent, RequirementKinetic> requirement) {
+    public JeiKineticComponent(RecipeRequirement<KineticComponent, RequirementKinetic, StressHolder> requirement) {
         super(requirement, 0, 0);
     }
 

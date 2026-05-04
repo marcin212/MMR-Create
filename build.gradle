@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.82'
+    id 'net.neoforged.moddev' version '2.0.105'
     id 'idea'
 }
 
@@ -19,9 +19,12 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    mavenCentral()
     maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // Create, Ponder, Flywheel
     maven { url = "https://mvn.devos.one/snapshots" } // Registrate
     maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
+    maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
     //MMR
     maven {
         name = "AlecRepository"
@@ -45,6 +48,8 @@ repositories {
             includeGroup "com.github.rtyley"
         }
     }
+
+
     //KubeJS
     maven {
         name = "Lat's maven"
@@ -54,6 +59,10 @@ repositories {
             includeGroup "dev.latvian.apps"
         }
     }
+    maven {
+        name = "latviandevReleases"
+        url = uri("https://maven.latvian.dev/releases")
+    }
     //Jade
     maven {
         url "https://www.cursemaven.com"
@@ -61,13 +70,78 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    //JEI
+
+    // LDLib2
+    maven {
+        url = "https://maven.firstdark.dev/snapshots"
+    }
+
+    // MMR dependencies
+    maven {
+        name = "Mod maven"
+        url = "https://modmaven.dev/"
+        content {
+            includeGroup "mcjty.theoneprobe"
+            includeGroup "mekanism"
+        }
+    }
     maven {
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
         content {
             includeGroup "mezz.jei"
+            includeGroup "com.hollingsworth.ars_nouveau"
+            includeGroup "com.hollingsworth.nuggets"
+            includeGroup "vazkii.patchouli"
+            includeGroup "com.almostreliable.mods"
         }
+    }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+    maven {
+        name = "Covers"
+        // for rf stuffs
+        url = "https://maven.covers1624.net"
+    }
+    maven { // TOP
+        url "https://maven.k-4u.nl"
+        content {
+            includeGroup "mcjty.theoneprobe"
+        }
+    }
+    maven {
+        name = "OctoStudios"
+        url = uri("https://maven.octo-studios.com/releases")
+    }
+    maven {
+        name = "terrarium"
+        url = 'https://maven.teamresourceful.com/repository/maven-public/'
+    }
+    maven {
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
+    }
+    maven {
+        name = "Shedaniel's maven"
+        url = "https://maven.shedaniel.me/"
+        content {
+            includeGroup "me.shedaniel.cloth"
+        }
+    }
+    maven {
+        url = "https://maven.architectury.dev"
+        content {
+            includeGroup "dev.architectury"
+        }
+    }
+    maven {
+        name = "Forge"
+        url = "https://maven.minecraftforge.net"
     }
 }
 
@@ -186,7 +260,7 @@ dependencies {
 
     //Create dependencies
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
-    implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}")
     compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
@@ -208,6 +282,9 @@ dependencies {
 
     // Jade
     localRuntime compileOnly("curse.maven:jade-324717:${jade_version}")
+
+    //LDLib2
+    localRuntime compileOnly("com.lowdragmc.ldlib2:ldlib2-neoforge-${minecraft_version}:${ldlib2_version}:all") { transitive = false }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

@@ -16,7 +16,7 @@ import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 
 
-public class RequirementKinetic implements IRequirement<KineticComponent> {
+public class RequirementKinetic implements IRequirement<KineticComponent, StressHolder> {
     public static final NamedCodec<RequirementKinetic> CODEC =
             NamedCodec.record(instance -> instance.group(
                             NamedCodec.longRange(0, Long.MAX_VALUE).fieldOf("rmp").forGetter(RequirementKinetic::getRmp),
@@ -53,7 +53,7 @@ public class RequirementKinetic implements IRequirement<KineticComponent> {
     }
 
     @Override
-    public RequirementType<? extends IRequirement<KineticComponent>> getType() {
+    public RequirementType<? extends IRequirement<KineticComponent, StressHolder>, KineticComponent, StressHolder> getType() {
         return RequirementTypeRegistration.KINETIC.get();
     }
 

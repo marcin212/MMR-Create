@@ -19,7 +19,7 @@ public class KineticComponent extends MachineComponent<StressHolder> {
     }
 
     @Override
-    public @NotNull ComponentType getComponentType() {
+    public @NotNull ComponentType<StressHolder> getComponentType() {
         return ComponentRegistration.COMPONENT_KINETIC.get();
     }
 
@@ -43,7 +43,7 @@ public class KineticComponent extends MachineComponent<StressHolder> {
     }
 
     @Override
-    public <C extends MachineComponent<?>> boolean canMerge(@NotNull C c) {
+    public <C extends MachineComponent<StressHolder>> boolean canMerge(@NotNull C c) {
         KineticComponent comp = (KineticComponent) c;
         if (c == this) return false;
         return comp.getIOType() == getIOType() &&
@@ -51,7 +51,7 @@ public class KineticComponent extends MachineComponent<StressHolder> {
     }
 
     @Override
-    public <C extends MachineComponent<?>> @NotNull C merge(@NotNull C c) {
+    public <C extends MachineComponent<StressHolder>> @NotNull C merge(@NotNull C c) {
         KineticComponent comp = (KineticComponent) c;
         //noinspection unchecked
         return (C) new KineticComponent(new StressHolder(stress.isProducing(), stress.getRpm(), stress.getStress()) {

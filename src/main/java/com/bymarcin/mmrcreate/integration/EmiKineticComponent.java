@@ -17,10 +17,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class EmiKineticComponent extends EmiComponent<StressHolder, RecipeRequirement<KineticComponent, RequirementKinetic>> implements ItemRendering {
+public class EmiKineticComponent extends EmiComponent<StressHolder, RecipeRequirement<KineticComponent, RequirementKinetic, StressHolder>> implements ItemRendering {
     private int width = 16, height = 16;
 
-    public EmiKineticComponent(RecipeRequirement<KineticComponent, RequirementKinetic> requirement) {
+    public EmiKineticComponent(RecipeRequirement<KineticComponent, RequirementKinetic, StressHolder> requirement) {
         super(requirement, 0, 0);
     }
 
